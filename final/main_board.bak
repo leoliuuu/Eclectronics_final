@@ -1861,11 +1861,11 @@ F 3 "" H 13600 1950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Analog_Switch:ADG417BN U?
+L Analog_Switch:ADG417BN U9
 U 1 1 5CAE4932
 P 11150 1950
-F 0 "U?" H 11150 2217 50  0000 C CNN
-F 1 "ADG417BN" H 11150 2126 50  0000 C CNN
+F 0 "U9" H 11150 2217 50  0000 C CNN
+F 1 "TS02CQE" H 11150 2126 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm" H 11150 1850 50  0001 C CNN
 F 3 "http://www.analog.com/media/en/technical-documentation/data-sheets/ADG417.pdf" H 11150 1950 50  0001 C CNN
 	1    11150 1950

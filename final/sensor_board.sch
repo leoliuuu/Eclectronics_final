@@ -798,11 +798,6 @@ Wire Wire Line
 Wire Wire Line
 	4200 1900 4200 1950
 Wire Wire Line
-	4200 1900 3900 1900
-Connection ~ 4200 1900
-Text Label 3900 1900 2    50   ~ 0
-VIN
-Wire Wire Line
 	2200 4600 2400 4600
 Wire Wire Line
 	2400 4600 2400 3100
@@ -1053,7 +1048,7 @@ Wire Wire Line
 Wire Wire Line
 	14470 7580 14620 7580
 $Comp
-L final:TPS2113ADRBR U5
+L sensor_board-rescue:TPS2113ADRBR-final U5
 U 1 1 5C6B8D23
 P 7500 2200
 F 0 "U5" H 7500 2787 60  0000 C CNN
@@ -1064,7 +1059,7 @@ F 3 "" H 7500 2350 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L final:MCP1702T-5002E_CB U4
+L sensor_board-rescue:MCP1702T-5002E_CB-final U4
 U 1 1 5C6B8EBC
 P 4800 2000
 F 0 "U4" H 4800 2365 50  0000 C CNN
@@ -1075,7 +1070,7 @@ F 3 "" H 4800 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L final:SW S2
+L sensor_board-rescue:SW-final S2
 U 1 1 5C6B90CD
 P 7000 5300
 F 0 "S2" H 7048 5346 50  0000 L CNN
@@ -1086,7 +1081,7 @@ F 3 "" V 7050 5400 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L final:USB_microB_2040002-1 J1
+L sensor_board-rescue:USB_microB_2040002-1-final J1
 U 1 1 5C6B9394
 P 1550 5000
 F 0 "J1" H 1655 5689 60  0000 C CNN
@@ -1097,7 +1092,7 @@ F 3 "" H 1900 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L final:Arduino_ICSP J2
+L sensor_board-rescue:Arduino_ICSP-final J2
 U 1 1 5C6B9A65
 P 14270 7480
 F 0 "J2" H 14270 7805 50  0000 C CNN
@@ -1108,7 +1103,7 @@ F 3 "" H 14270 7580 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L final:ATMEGA328PB-ANR U7
+L main_board-rescue:ATMEGA328PB-ANR-final U7
 U 1 1 5C6C352E
 P 9800 6100
 F 0 "U7" H 9800 8265 50  0000 C CNN
@@ -1121,7 +1116,7 @@ $EndComp
 Wire Wire Line
 	8650 7800 8650 7850
 $Comp
-L final:FT232RL U2
+L sensor_board-rescue:FT232RL-final U2
 U 1 1 5C6CF653
 P 4500 5500
 F 0 "U2" H 4500 7065 50  0000 C CNN
@@ -1132,7 +1127,7 @@ F 3 "" H 4500 6450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L final:Crystal Y1
+L sensor_board-rescue:Crystal-final Y1
 U 1 1 5C6CF8B9
 P 8500 5200
 F 0 "Y1" V 8454 5331 50  0000 L CNN
@@ -1277,7 +1272,7 @@ F 3 "" H 6710 8570 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L final:SW S1
+L sensor_board-rescue:SW-final S1
 U 1 1 5CB4A3A3
 P 6710 9320
 F 0 "S1" H 6758 9366 50  0000 L CNN
@@ -1372,7 +1367,7 @@ Wire Wire Line
 Wire Wire Line
 	13810 8310 14220 8310
 $Comp
-L final:TXS0104E U1
+L sensor_board-rescue:TXS0104E-final U1
 U 1 1 5CAAB751
 P 2880 9420
 F 0 "U1" H 2855 8784 50  0000 C CNN
@@ -1570,7 +1565,7 @@ F 3 "" H 14000 5100 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L final:US5881 U6
+L sensor_board-rescue:US5881-final U6
 U 1 1 5CAB13C9
 P 8450 9120
 F 0 "U6" H 8450 9485 50  0000 C CNN
@@ -1608,4 +1603,158 @@ Wire Wire Line
 	7960 9220 8100 9220
 Text Label 8800 9120 0    50   ~ 0
 D2
+$Comp
+L power:GND #PWR056
+U 1 1 5CAB55FC
+P 3500 1450
+F 0 "#PWR056" H 3500 1200 50  0001 C CNN
+F 1 "GND" H 3505 1277 50  0000 C CNN
+F 2 "" H 3500 1450 50  0001 C CNN
+F 3 "" H 3500 1450 50  0001 C CNN
+	1    3500 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C16
+U 1 1 5CAB5602
+P 4100 1150
+F 0 "C16" H 4215 1196 50  0000 L CNN
+F 1 "1µF" H 4215 1105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4138 1000 50  0001 C CNN
+F 3 "~" H 4100 1150 50  0001 C CNN
+	1    4100 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR057
+U 1 1 5CAB5609
+P 4100 1300
+F 0 "#PWR057" H 4100 1050 50  0001 C CNN
+F 1 "GND" H 4105 1127 50  0000 C CNN
+F 2 "" H 4100 1300 50  0001 C CNN
+F 3 "" H 4100 1300 50  0001 C CNN
+	1    4100 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C15
+U 1 1 5CAB560F
+P 2900 1150
+F 0 "C15" H 3015 1196 50  0000 L CNN
+F 1 "1µF" H 3015 1105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2938 1000 50  0001 C CNN
+F 3 "~" H 2900 1150 50  0001 C CNN
+	1    2900 1150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR055
+U 1 1 5CAB5616
+P 2900 1300
+F 0 "#PWR055" H 2900 1050 50  0001 C CNN
+F 1 "GND" H 2905 1127 50  0000 C CNN
+F 2 "" H 2900 1300 50  0001 C CNN
+F 3 "" H 2900 1300 50  0001 C CNN
+	1    2900 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 950  4100 950 
+Wire Wire Line
+	4100 1000 4100 950 
+Wire Wire Line
+	3000 950  2900 950 
+Wire Wire Line
+	2900 950  2900 1000
+$Comp
+L sensor_board-rescue:MCP1702T-5002E_CB-final U8
+U 1 1 5CAB5626
+P 3500 1050
+F 0 "U8" H 3500 1415 50  0000 C CNN
+F 1 "MCP1702T-3302E/CBCT-ND" H 3500 1324 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3500 1150 50  0001 C CNN
+F 3 "" H 3500 1150 50  0001 C CNN
+	1    3500 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 950  4650 950 
+Connection ~ 4100 950 
+$Comp
+L power:+3.3V #PWR058
+U 1 1 5CAD1AF1
+P 4650 950
+F 0 "#PWR058" H 4650 800 50  0001 C CNN
+F 1 "+3.3V" V 4665 1078 50  0000 L CNN
+F 2 "" H 4650 950 50  0001 C CNN
+F 3 "" H 4650 950 50  0001 C CNN
+	1    4650 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L Analog_Switch:ADG417BN U7
+U 1 1 5CAD3137
+P 2200 950
+F 0 "U7" H 2200 1217 50  0000 C CNN
+F 1 "TS02CQE" H 2200 1126 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 2200 850 50  0001 C CNN
+F 3 "http://www.analog.com/media/en/technical-documentation/data-sheets/ADG417.pdf" H 2200 950 50  0001 C CNN
+	1    2200 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 950  2550 950 
+Connection ~ 2900 950 
+NoConn ~ 2200 1150
+Wire Wire Line
+	1900 950  1600 950 
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J?
+U 1 1 5CB1E020
+P 1300 950
+F 0 "J?" H 1350 1167 50  0000 C CNN
+F 1 "JST-PH Connector" H 1350 1076 50  0000 C CNN
+F 2 "" H 1300 950 50  0001 C CNN
+F 3 "~" H 1300 950 50  0001 C CNN
+	1    1300 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CB1E2D9
+P 1600 1100
+F 0 "#PWR?" H 1600 850 50  0001 C CNN
+F 1 "GND" H 1605 927 50  0000 C CNN
+F 2 "" H 1600 1100 50  0001 C CNN
+F 3 "" H 1600 1100 50  0001 C CNN
+	1    1600 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CB23E06
+P 1100 1100
+F 0 "#PWR?" H 1100 850 50  0001 C CNN
+F 1 "GND" H 1105 927 50  0000 C CNN
+F 2 "" H 1100 1100 50  0001 C CNN
+F 3 "" H 1100 1100 50  0001 C CNN
+	1    1100 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 950  800  950 
+Text Label 800  950  2    50   ~ 0
+VIN
+Wire Wire Line
+	1100 1050 1100 1100
+Wire Wire Line
+	1600 1050 1600 1100
+Wire Wire Line
+	2550 950  2550 1900
+Wire Wire Line
+	2550 1900 4200 1900
+Connection ~ 2550 950 
+Wire Wire Line
+	2550 950  2900 950 
+Connection ~ 4200 1900
 $EndSCHEMATC

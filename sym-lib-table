@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name mp3b)(type Legacy)(uri ${KIPRJMOD}/mp3b.lib)(options "")(descr ""))
+  (lib (name main_board-rescue)(type Legacy)(uri ${KIPRJMOD}/main_board-rescue.lib)(options "")(descr ""))
+  (lib (name sensor_board-rescue)(type Legacy)(uri ${KIPRJMOD}/sensor_board-rescue.lib)(options "")(descr ""))
+)

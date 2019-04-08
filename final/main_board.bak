@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:main_board-cache
 EELAYER 26 0
 EELAYER END
 $Descr C 22000 17000
@@ -1063,7 +1064,7 @@ Wire Wire Line
 Wire Wire Line
 	14470 7580 14620 7580
 $Comp
-L mp3b:TPS2113ADRBR U3
+L final:TPS2113ADRBR U3
 U 1 1 5C6B8D23
 P 7500 2200
 F 0 "U3" H 7500 2787 60  0000 C CNN
@@ -1074,7 +1075,7 @@ F 3 "" H 7500 2350 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L mp3b:MCP1702T-5002E_CB U2
+L final:MCP1702T-5002E_CB U2
 U 1 1 5C6B8EBC
 P 4800 2000
 F 0 "U2" H 4800 2365 50  0000 C CNN
@@ -1085,7 +1086,7 @@ F 3 "" H 4800 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L mp3b:SW S1
+L final:SW S1
 U 1 1 5C6B90CD
 P 7000 5300
 F 0 "S1" H 7048 5346 50  0000 L CNN
@@ -1096,7 +1097,7 @@ F 3 "" V 7050 5400 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L mp3b:USB_microB_2040002-1 J1
+L final:USB_microB_2040002-1 J1
 U 1 1 5C6B9394
 P 1550 5000
 F 0 "J1" H 1655 5689 60  0000 C CNN
@@ -1107,7 +1108,7 @@ F 3 "" H 1900 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L mp3b:Arduino_ICSP J2
+L final:Arduino_ICSP J2
 U 1 1 5C6B9A65
 P 14270 7480
 F 0 "J2" H 14270 7805 50  0000 C CNN
@@ -1118,7 +1119,7 @@ F 3 "" H 14270 7580 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L mp3b:ATMEGA328PB-ANR U4
+L final:ATMEGA328PB-ANR U4
 U 1 1 5C6C352E
 P 9800 6100
 F 0 "U4" H 9800 8265 50  0000 C CNN
@@ -1131,7 +1132,7 @@ $EndComp
 Wire Wire Line
 	8650 7800 8650 7850
 $Comp
-L mp3b:FT232RL U1
+L final:FT232RL U1
 U 1 1 5C6CF653
 P 4500 5500
 F 0 "U1" H 4500 7065 50  0000 C CNN
@@ -1142,7 +1143,7 @@ F 3 "" H 4500 6450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L mp3b:Crystal Y1
+L final:Crystal Y1
 U 1 1 5C6CF8B9
 P 8500 5200
 F 0 "Y1" V 8454 5331 50  0000 L CNN
@@ -1471,7 +1472,7 @@ F 3 "" H 9520 9180 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L mp3b:SW S2
+L final:SW S2
 U 1 1 5CB4A3A3
 P 9520 9930
 F 0 "S2" H 9568 9976 50  0000 L CNN
@@ -1566,7 +1567,7 @@ Wire Wire Line
 Wire Wire Line
 	13780 9360 14190 9360
 $Comp
-L mp3b:TXS0104E U6
+L final:TXS0104E U6
 U 1 1 5CAAB751
 P 5690 10030
 F 0 "U6" H 5665 9394 50  0000 C CNN

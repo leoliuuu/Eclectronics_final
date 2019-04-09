@@ -1568,9 +1568,7 @@ Wire Wire Line
 Connection ~ 5140 9830
 Wire Wire Line
 	5140 9830 5240 9830
-NoConn ~ 5240 10180
 NoConn ~ 5240 10280
-NoConn ~ 6140 10180
 NoConn ~ 6140 10280
 $Comp
 L power:+5V #PWR045
@@ -1943,4 +1941,10 @@ F 3 "" H 13910 8010 50  0001 C CNN
 	1    13910 8010
 	0    -1   -1   0   
 $EndComp
+Text Notes 10880 8800 0    50   ~ 0
+Mode button\n
+Text Label 5240 10180 2    50   ~ 0
+D3
+Text Label 6140 10180 0    50   ~ 0
+~RST
 $EndSCHEMATC

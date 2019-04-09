@@ -1412,21 +1412,8 @@ Wire Wire Line
 Connection ~ 2330 9220
 Wire Wire Line
 	2330 9220 2430 9220
-NoConn ~ 2430 9570
 NoConn ~ 2430 9670
-NoConn ~ 3330 9570
 NoConn ~ 3330 9670
-$Comp
-L power:+3V3 #PWR06
-U 1 1 5CADBD7A
-P 2980 8340
-F 0 "#PWR06" H 2980 8190 50  0001 C CNN
-F 1 "+3V3" V 2980 8490 50  0000 L CNN
-F 2 "" H 2980 8340 50  0001 C CNN
-F 3 "" H 2980 8340 50  0001 C CNN
-	1    2980 8340
-	-1   0    0    -1  
-$EndComp
 $Comp
 L power:+5V #PWR04
 U 1 1 5CADBE18
@@ -1768,4 +1755,19 @@ F 3 "~" H 3150 6800 50  0001 C CNN
 	1    3150 6800
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5CAC1029
+P 2980 8340
+F 0 "#PWR?" H 2980 8190 50  0001 C CNN
+F 1 "+3.3V" V 2995 8468 50  0000 L CNN
+F 2 "" H 2980 8340 50  0001 C CNN
+F 3 "" H 2980 8340 50  0001 C CNN
+	1    2980 8340
+	1    0    0    -1  
+$EndComp
+Text Label 2430 9570 2    50   ~ 0
+D3
+Text Label 3330 9570 0    50   ~ 0
+~RST
 $EndSCHEMATC

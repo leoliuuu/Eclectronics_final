@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
 LIBS:main_board-cache
-LIBS:sensor_board-cache
 EELAYER 26 0
 EELAYER END
 $Descr C 22000 17000
@@ -2458,4 +2457,10 @@ Wire Wire Line
 Connection ~ 13450 3650
 Wire Wire Line
 	13450 3650 13800 3650
+Text Notes 11600 1700 0    50   ~ 0
+BATTERY MULTIPLEXER + CHARGER
+Text Notes 16050 1750 0    50   ~ 0
+BATTERY GAUGE
+Text Notes 18000 6750 0    50   ~ 0
+BATTERY HEADER
 $EndSCHEMATC

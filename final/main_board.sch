@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:main_board-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr C 22000 17000
 encoding utf-8
@@ -1437,7 +1437,7 @@ U 1 1 5CB60949
 P 19790 12810
 F 0 "J4" H 19763 12783 50  0000 R CNN
 F 1 "BT CONFIG" H 19763 12692 50  0000 R CNN
-F 2 "" H 19790 12810 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 19790 12810 50  0001 C CNN
 F 3 "~" H 19790 12810 50  0001 C CNN
 	1    19790 12810
 	-1   0    0    -1  

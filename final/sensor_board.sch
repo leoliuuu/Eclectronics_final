@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:sensor_board-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr User 18504 11811
 encoding utf-8
@@ -1242,7 +1242,7 @@ U 1 1 5CB60949
 P 16870 9310
 F 0 "J6" H 16843 9283 50  0000 R CNN
 F 1 "BT CONFIG" H 16843 9192 50  0000 R CNN
-F 2 "" H 16870 9310 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 16870 9310 50  0001 C CNN
 F 3 "~" H 16870 9310 50  0001 C CNN
 	1    16870 9310
 	-1   0    0    -1  

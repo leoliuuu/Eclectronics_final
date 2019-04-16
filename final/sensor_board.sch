@@ -723,8 +723,6 @@ F 3 "" H 8550 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8250 2000 8430 2000
-Wire Wire Line
 	8950 2050 8950 2000
 Connection ~ 8950 2000
 Wire Wire Line
@@ -1403,12 +1401,10 @@ Wire Wire Line
 	2040 9320 2130 9320
 Wire Wire Line
 	2430 9320 2480 9320
-Text Label 8430 1790 2    50   ~ 0
+Text Label 2340 3200 2    50   ~ 0
 UART_EN
-Text Label 2480 9040 2    50   ~ 0
+Text Label 1350 8960 2    50   ~ 0
 UART_EN
-Wire Wire Line
-	2480 9040 2480 9320
 Connection ~ 2480 9320
 Wire Wire Line
 	2480 9320 2580 9320
@@ -1546,11 +1542,6 @@ Text Notes 15840 8740 0    50   ~ 0
 Headers for FTDI cable
 Text Notes 2240 8010 0    50   ~ 0
 Enable Serial comm. with ATMEGA when it is powered.\nOtherwise, communicate with FTDI cable
-Wire Wire Line
-	8430 1790 8430 2000
-Connection ~ 8430 2000
-Wire Wire Line
-	8430 2000 8550 2000
 Text Notes 4270 8380 0    50   ~ 0
 Bluetooth module
 $Comp
@@ -2305,4 +2296,71 @@ Text Notes 15500 1000 0    50   ~ 0
 Battery Gauge
 Text Notes 14800 4250 0    50   ~ 0
 Battery Header
+$Comp
+L final:NC7SZ04P5X U?
+U 1 1 5CB62293
+P 1650 9060
+F 0 "U?" H 1650 9385 50  0000 C CNN
+F 1 "NC7SZ04P5X" H 1650 9294 50  0000 C CNN
+F 2 "" H 1650 9060 50  0001 C CNN
+F 3 "" H 1650 9060 50  0001 C CNN
+	1    1650 9060
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 8960 2480 8960
+Wire Wire Line
+	2480 8960 2480 9320
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5CB88CF2
+P 1010 9060
+F 0 "#PWR?" H 1010 8910 50  0001 C CNN
+F 1 "+3V3" V 1010 9210 50  0000 L CNN
+F 2 "" H 1010 9060 50  0001 C CNN
+F 3 "" H 1010 9060 50  0001 C CNN
+	1    1010 9060
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CB88E65
+P 1140 9420
+F 0 "#PWR?" H 1140 9170 50  0001 C CNN
+F 1 "GND" V 1140 9270 50  0000 R CNN
+F 2 "" H 1140 9420 50  0001 C CNN
+F 3 "" H 1140 9420 50  0001 C CNN
+	1    1140 9420
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 2000 8550 2000
+Wire Wire Line
+	2340 3200 2550 3200
+Connection ~ 2550 3200
+Wire Wire Line
+	1350 9060 1140 9060
+$Comp
+L Device:C C?
+U 1 1 5CBD6DA1
+P 1140 9210
+F 0 "C?" H 1255 9256 50  0000 L CNN
+F 1 "0.1µF" H 1255 9165 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1178 9060 50  0001 C CNN
+F 3 "~" H 1140 9210 50  0001 C CNN
+	1    1140 9210
+	-1   0    0    1   
+$EndComp
+Connection ~ 1140 9060
+Wire Wire Line
+	1140 9060 1010 9060
+Wire Wire Line
+	1140 9420 1140 9390
+Wire Wire Line
+	1350 9160 1350 9390
+Wire Wire Line
+	1350 9390 1140 9390
+Connection ~ 1140 9390
+Wire Wire Line
+	1140 9390 1140 9360
 $EndSCHEMATC

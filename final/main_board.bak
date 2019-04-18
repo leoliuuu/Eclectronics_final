@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:main_board-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr C 22000 17000
 encoding utf-8
@@ -2605,7 +2605,7 @@ U 1 1 5CD73932
 P 4650 2600
 F 0 "L1" H 4650 2815 50  0000 C CNN
 F 1 "4.7uH" H 4650 2724 50  0000 C CNN
-F 2 "" H 4650 2600 50  0001 C CNN
+F 2 "mp3b:CDRH2D18HP" H 4650 2600 50  0001 C CNN
 F 3 "http://products.sumida.com/products/pdf/CDRH2D18HP.pdf" H 4650 2600 50  0001 C CNN
 	1    4650 2600
 	1    0    0    -1  

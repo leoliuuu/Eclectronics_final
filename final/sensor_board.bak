@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:sensor_board-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr User 18504 11811
 encoding utf-8
@@ -1291,7 +1291,7 @@ U 1 1 5CAAB751
 P 3530 9670
 F 0 "U3" H 3505 9034 50  0000 C CNN
 F 1 "TXS0104E" H 3505 8943 50  0000 C CNN
-F 2 "" H 3730 9670 50  0001 C CNN
+F 2 "mp3b:txs0104e" H 3730 9670 50  0001 C CNN
 F 3 "" H 3730 9670 50  0001 C CNN
 	1    3530 9670
 	1    0    0    -1  

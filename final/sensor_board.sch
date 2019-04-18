@@ -1812,8 +1812,6 @@ F 3 "" H 14400 3250 50  0001 C CNN
 	1    14400 3250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	14400 2800 14400 2700
 $Comp
 L Device:R R22
 U 1 1 5CE0B2DE
@@ -2027,8 +2025,6 @@ F 3 "" H 17200 2750 50  0001 C CNN
 	1    17200 2750
 	1    0    0    -1  
 $EndComp
-Text Label 14400 2700 0    50   ~ 0
-V_BATT
 NoConn ~ 11500 2100
 $Comp
 L Device:R R23
@@ -2478,4 +2474,8 @@ Wire Wire Line
 	5250 2300 5150 2300
 Wire Wire Line
 	13050 2800 14400 2800
+Text Label 14400 2700 0    50   ~ 0
+V_BATT
+Wire Wire Line
+	14400 2800 14400 2700
 $EndSCHEMATC

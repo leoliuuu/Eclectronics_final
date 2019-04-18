@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name mp3b)(type KiCad)(uri ${KIPRJMOD}/mp3b.pretty)(options "")(descr ""))
+  (lib (name BQ24075TRGTR)(type Legacy)(uri ${KIPRJMOD}/mp3b.pretty/BQ24075TRGTR/BQ24075TRGTR.mod)(options "")(descr ""))
 )

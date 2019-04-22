@@ -1022,7 +1022,7 @@ F 3 "" H 16720 8480 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L main_board-rescue:ATMEGA328PB-ANR-final U9
+L final:ATMEGA328PB-ANR U9
 U 1 1 5CAFC133
 P 10450 6350
 F 0 "U9" H 10450 8515 50  0000 C CNN
@@ -1035,7 +1035,7 @@ $EndComp
 Wire Wire Line
 	9300 8050 9300 8100
 $Comp
-L sensor_board-rescue:FT232RL-final U5
+L final:FT232RL U5
 U 1 1 5CAFC134
 P 5150 5750
 F 0 "U5" H 5150 7315 50  0000 C CNN
@@ -2478,4 +2478,22 @@ Text Label 14400 2700 0    50   ~ 0
 V_BATT
 Wire Wire Line
 	14400 2800 14400 2700
+$Comp
+L power:GND #PWR?
+U 1 1 5CBEF882
+P 5450 7350
+F 0 "#PWR?" H 5450 7100 50  0001 C CNN
+F 1 "GND" H 5455 7177 50  0000 C CNN
+F 2 "" H 5450 7350 50  0001 C CNN
+F 3 "" H 5450 7350 50  0001 C CNN
+	1    5450 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 7350 5450 7250
+Wire Wire Line
+	9450 7450 9300 7450
+Wire Wire Line
+	9300 7450 9300 7650
+Connection ~ 9300 7650
 $EndSCHEMATC

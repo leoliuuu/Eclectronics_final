@@ -820,77 +820,7 @@ Wire Wire Line
 Connection ~ 7300 3000
 Wire Wire Line
 	7300 3000 7350 3000
-$Comp
-L Connector:Conn_01x15_Male J6
-U 1 1 5CB10A94
-P 19800 7850
-F 0 "J6" H 19773 7873 50  0000 R CNN
-F 1 "Conn_01x15_Male" H 19773 7782 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical" H 19800 7850 50  0001 C CNN
-F 3 "~" H 19800 7850 50  0001 C CNN
-	1    19800 7850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x15_Male J7
-U 1 1 5CB10A95
-P 19800 9650
-F 0 "J7" H 19773 9673 50  0000 R CNN
-F 1 "Conn_01x15_Male" H 19773 9582 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical" H 19800 9650 50  0001 C CNN
-F 3 "~" H 19800 9650 50  0001 C CNN
-	1    19800 9650
-	-1   0    0    -1  
-$EndComp
-Text Label 19600 7150 2    50   ~ 0
-VIN
-$Comp
-L power:GND #PWR072
-U 1 1 5C586795
-P 19400 7250
-F 0 "#PWR072" H 19400 7000 50  0001 C CNN
-F 1 "GND" V 19400 7100 50  0000 R CNN
-F 2 "" H 19400 7250 50  0001 C CNN
-F 3 "" H 19400 7250 50  0001 C CNN
-	1    19400 7250
-	0    1    1    0   
-$EndComp
-Text Label 19600 7350 2    50   ~ 0
-RESET
-$Comp
-L power:+5V #PWR073
-U 1 1 5C59157E
-P 19400 7450
-F 0 "#PWR073" H 19400 7300 50  0001 C CNN
-F 1 "+5V" V 19400 7600 50  0000 L CNN
-F 2 "" H 19400 7450 50  0001 C CNN
-F 3 "" H 19400 7450 50  0001 C CNN
-	1    19400 7450
-	0    -1   -1   0   
-$EndComp
-Text Label 19600 7550 2    50   ~ 0
-A7
-Text Label 19600 7650 2    50   ~ 0
-A6
-Text Label 19600 7750 2    50   ~ 0
-A5
-Text Label 19600 7850 2    50   ~ 0
-A4
-Text Label 19600 7950 2    50   ~ 0
-A3
-Text Label 19600 8050 2    50   ~ 0
-A2
-Text Label 19600 8150 2    50   ~ 0
-A1
-Text Label 19600 8250 2    50   ~ 0
-A0
-Wire Wire Line
-	19400 7450 19600 7450
-Wire Wire Line
-	19400 7250 19600 7250
 Text Label 9150 6900 2    50   ~ 0
-AREF
-Text Label 19600 8350 2    50   ~ 0
 AREF
 $Comp
 L power:+3V3 #PWR070
@@ -903,39 +833,6 @@ F 3 "" H 19310 11360 50  0001 C CNN
 	1    19310 11360
 	0    -1   1    0   
 $EndComp
-Wire Wire Line
-	19400 8450 19600 8450
-Text Label 19600 8950 2    50   ~ 0
-D1
-Text Label 19600 9050 2    50   ~ 0
-D0
-Text Label 19600 9150 2    50   ~ 0
-RESET
-$Comp
-L power:GND #PWR075
-U 1 1 5CB10A98
-P 19400 9250
-F 0 "#PWR075" H 19400 9000 50  0001 C CNN
-F 1 "GND" V 19400 9100 50  0000 R CNN
-F 2 "" H 19400 9250 50  0001 C CNN
-F 3 "" H 19400 9250 50  0001 C CNN
-	1    19400 9250
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	19400 9250 19600 9250
-Text Label 19600 9350 2    50   ~ 0
-D2
-Text Label 19600 9450 2    50   ~ 0
-D3
-Text Label 19600 9550 2    50   ~ 0
-D4
-Text Label 19600 9650 2    50   ~ 0
-D5
-Text Label 19600 9750 2    50   ~ 0
-D6
-Text Label 19600 10350 2    50   ~ 0
-D12
 Text Label 19470 10730 2    50   ~ 0
 D12
 Text Label 19870 10830 0    50   ~ 0
@@ -1033,7 +930,7 @@ F 3 "" H 19670 10930 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L final:ATMEGA328PB-ANR U8
+L main_board-rescue:ATMEGA328PB-ANR-final U8
 U 1 1 5C6C352E
 P 10250 7200
 F 0 "U8" H 10250 9365 50  0000 C CNN
@@ -1130,17 +1027,17 @@ Text Label 4050 11400 2    50   ~ 0
 BUSY
 NoConn ~ 4050 11500
 NoConn ~ 4050 11600
-Text Label 4850 10900 0    50   ~ 0
+Text Label 4850 11400 0    50   ~ 0
 D11
 Text Label 4850 11000 0    50   ~ 0
 D13
-Text Label 4850 11100 0    50   ~ 0
+Text Label 4850 11300 0    50   ~ 0
 D10
 Text Label 4850 11200 0    50   ~ 0
 D9
-Text Label 4850 11300 0    50   ~ 0
+Text Label 4850 11100 0    50   ~ 0
 D8
-Text Label 4850 11400 0    50   ~ 0
+Text Label 4850 10900 0    50   ~ 0
 D7
 NoConn ~ 4850 11500
 NoConn ~ 4850 11600
@@ -1644,18 +1541,6 @@ RTS
 Text Label 10140 11810 2    50   ~ 0
 CTS
 NoConn ~ 10140 11910
-Text Label 19600 8550 2    50   ~ 0
-D13
-Text Label 19600 10250 2    50   ~ 0
-D11
-Text Label 19600 10150 2    50   ~ 0
-D10
-Text Label 19600 10050 2    50   ~ 0
-D9
-Text Label 19600 9950 2    50   ~ 0
-D8
-Text Label 19600 9850 2    50   ~ 0
-D7
 Text Notes 18970 11240 0    50   ~ 0
 8-Pin JST rectangular \nconnector for E-Ink display
 Text Notes 19260 12390 0    50   ~ 0
@@ -1666,17 +1551,6 @@ Text Notes 8220 10130 0    50   ~ 0
 Enable Serial comm. with ATMEGA when it is powered.\nOtherwise, communicate with FTDI cable
 Text Notes 10250 10500 0    50   ~ 0
 Bluetooth module
-$Comp
-L power:+3V3 #PWR074
-U 1 1 5CB62328
-P 19400 8450
-F 0 "#PWR074" H 19400 8300 50  0001 C CNN
-F 1 "+3V3" V 19400 8600 50  0000 L CNN
-F 2 "" H 19400 8450 50  0001 C CNN
-F 3 "" H 19400 8450 50  0001 C CNN
-	1    19400 8450
-	0    -1   1    0   
-$EndComp
 $Comp
 L power:GND #PWR05
 U 1 1 5CAC31DC
@@ -2636,9 +2510,15 @@ Wire Wire Line
 	5300 3500 5300 3200
 Wire Wire Line
 	5300 3200 5150 3200
-Wire Wire Line
-	9250 8300 9100 8300
-Wire Wire Line
-	9100 8300 9100 8500
-Connection ~ 9100 8500
+NoConn ~ 11350 9100
+NoConn ~ 11350 8900
+NoConn ~ 11350 8700
+NoConn ~ 11350 8500
+NoConn ~ 11350 8300
+NoConn ~ 11350 6700
+NoConn ~ 11350 6500
+NoConn ~ 11350 6300
+NoConn ~ 11350 6100
+NoConn ~ 11350 5900
+NoConn ~ 11350 5700
 $EndSCHEMATC

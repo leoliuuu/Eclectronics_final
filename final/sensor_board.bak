@@ -1022,7 +1022,7 @@ F 3 "" H 16720 8480 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L main_board-rescue:ATMEGA328PB-ANR-final U9
+L final:ATMEGA328PB-ANR U9
 U 1 1 5CAFC133
 P 10450 6350
 F 0 "U9" H 10450 8515 50  0000 C CNN
@@ -2491,4 +2491,9 @@ F 3 "" H 5450 7350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5450 7350 5450 7250
+Wire Wire Line
+	9450 7450 9300 7450
+Wire Wire Line
+	9300 7450 9300 7650
+Connection ~ 9300 7650
 $EndSCHEMATC

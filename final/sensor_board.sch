@@ -1022,7 +1022,7 @@ F 3 "" H 16720 8480 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L final:ATMEGA328PB-ANR U9
+L sensor_board-rescue:ATMEGA328PB-ANR-final U9
 U 1 1 5CAFC133
 P 10450 6350
 F 0 "U9" H 10450 8515 50  0000 C CNN
@@ -1035,7 +1035,7 @@ $EndComp
 Wire Wire Line
 	9300 8050 9300 8100
 $Comp
-L final:FT232RL U5
+L sensor_board-rescue:FT232RL-final U5
 U 1 1 5CAFC134
 P 5150 5750
 F 0 "U5" H 5150 7315 50  0000 C CNN

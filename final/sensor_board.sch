@@ -978,7 +978,7 @@ Wire Wire Line
 Wire Wire Line
 	16920 8480 17070 8480
 $Comp
-L sensor_board-rescue:TPS2113ADRBR-final U7
+L sensor_board-rescue:TPS2113ADRBR-final-sensor_board-rescue U7
 U 1 1 5CAFC12E
 P 8150 2450
 F 0 "U7" H 8150 3037 60  0000 C CNN
@@ -989,7 +989,7 @@ F 3 "" H 8150 2600 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L sensor_board-rescue:SW-final S2
+L sensor_board-rescue:SW-final-sensor_board-rescue S2
 U 1 1 5CAFC130
 P 7650 5550
 F 0 "S2" H 7698 5596 50  0000 L CNN
@@ -1000,7 +1000,7 @@ F 3 "" V 7700 5650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L sensor_board-rescue:USB_microB_2040002-1-final J1
+L sensor_board-rescue:USB_microB_2040002-1-final-sensor_board-rescue J1
 U 1 1 5C6B9394
 P 2200 5250
 F 0 "J1" H 2305 5939 60  0000 C CNN
@@ -1011,7 +1011,7 @@ F 3 "" H 2550 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L sensor_board-rescue:Arduino_ICSP-final J2
+L sensor_board-rescue:Arduino_ICSP-final-sensor_board-rescue J2
 U 1 1 5CAFC132
 P 16720 8380
 F 0 "J2" H 16720 8705 50  0000 C CNN
@@ -1022,7 +1022,7 @@ F 3 "" H 16720 8480 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L sensor_board-rescue:ATMEGA328PB-ANR-final U9
+L sensor_board-rescue:ATMEGA328PB-ANR-final-sensor_board-rescue U9
 U 1 1 5CAFC133
 P 10450 6350
 F 0 "U9" H 10450 8515 50  0000 C CNN
@@ -1035,7 +1035,7 @@ $EndComp
 Wire Wire Line
 	9300 8050 9300 8100
 $Comp
-L sensor_board-rescue:FT232RL-final U5
+L sensor_board-rescue:FT232RL-final-sensor_board-rescue U5
 U 1 1 5CAFC134
 P 5150 5750
 F 0 "U5" H 5150 7315 50  0000 C CNN
@@ -1046,7 +1046,7 @@ F 3 "" H 5150 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L sensor_board-rescue:Crystal-final Y1
+L sensor_board-rescue:Crystal-final-sensor_board-rescue Y1
 U 1 1 5CAFC135
 P 9150 5450
 F 0 "Y1" V 9104 5581 50  0000 L CNN
@@ -1191,7 +1191,7 @@ F 3 "" H 7360 8820 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L sensor_board-rescue:SW-final S1
+L sensor_board-rescue:SW-final-sensor_board-rescue S1
 U 1 1 5CB4A3A3
 P 7360 9570
 F 0 "S1" H 7408 9616 50  0000 L CNN
@@ -1286,7 +1286,7 @@ Wire Wire Line
 Wire Wire Line
 	16260 9210 16670 9210
 $Comp
-L sensor_board-rescue:TXS0104E-final U3
+L sensor_board-rescue:TXS0104E-final-sensor_board-rescue U3
 U 1 1 5CAAB751
 P 3530 9670
 F 0 "U3" H 3505 9034 50  0000 C CNN
@@ -1477,7 +1477,7 @@ F 3 "" H 16450 6000 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L sensor_board-rescue:US5881-final U8
+L sensor_board-rescue:US5881-final-sensor_board-rescue U8
 U 1 1 5CAB13C9
 P 9100 9370
 F 0 "U8" H 9100 9735 50  0000 C CNN
@@ -1579,7 +1579,7 @@ Wire Wire Line
 Wire Wire Line
 	2450 1000 2450 1050
 $Comp
-L sensor_board-rescue:MCP1702T-5002E_CB-final U2
+L sensor_board-rescue:MCP1702T-5002E_CB-final-sensor_board-rescue U2
 U 1 1 5CAB5626
 P 3050 1100
 F 0 "U2" H 3050 1465 50  0000 C CNN
@@ -2205,7 +2205,7 @@ Battery Gauge
 Text Notes 15300 4400 0    50   ~ 0
 Battery Header
 $Comp
-L sensor_board-rescue:NC7SZ04P5X-final U1
+L sensor_board-rescue:NC7SZ04P5X-final-sensor_board-rescue U1
 U 1 1 5CB62293
 P 2150 9210
 F 0 "U1" H 2150 9535 50  0000 C CNN

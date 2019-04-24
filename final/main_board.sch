@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:main_board-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr C 22000 17000
 encoding utf-8
@@ -930,7 +930,7 @@ F 3 "" H 19670 10930 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L sensor_board-rescue:ATMEGA328PB-ANR-final U8
+L main_board-rescue:ATMEGA328PB-ANR-final-sensor_board-rescue U8
 U 1 1 5C6C352E
 P 10250 7200
 F 0 "U8" H 10250 9365 50  0000 C CNN
@@ -943,7 +943,7 @@ $EndComp
 Wire Wire Line
 	9100 8900 9100 8950
 $Comp
-L sensor_board-rescue:FT232RL-final U3
+L main_board-rescue:FT232RL-final-sensor_board-rescue U3
 U 1 1 5C6CF653
 P 4950 6600
 F 0 "U3" H 4950 8165 50  0000 C CNN

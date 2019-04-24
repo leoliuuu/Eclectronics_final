@@ -930,7 +930,7 @@ F 3 "" H 19670 10930 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L main_board-rescue:ATMEGA328PB-ANR-final U8
+L sensor_board-rescue:ATMEGA328PB-ANR-final U8
 U 1 1 5C6C352E
 P 10250 7200
 F 0 "U8" H 10250 9365 50  0000 C CNN
@@ -2534,4 +2534,9 @@ F 3 "" H 5250 8200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5250 8100 5250 8200
+Wire Wire Line
+	9250 8300 9100 8300
+Wire Wire Line
+	9100 8300 9100 8500
+Connection ~ 9100 8500
 $EndSCHEMATC

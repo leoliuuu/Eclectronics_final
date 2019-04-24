@@ -930,7 +930,7 @@ F 3 "" H 19670 10930 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L main_board-rescue:ATMEGA328PB-ANR-final U8
+L sensor_board-rescue:ATMEGA328PB-ANR-final U8
 U 1 1 5C6C352E
 P 10250 7200
 F 0 "U8" H 10250 9365 50  0000 C CNN
@@ -943,7 +943,7 @@ $EndComp
 Wire Wire Line
 	9100 8900 9100 8950
 $Comp
-L main_board-rescue:FT232RL-final U3
+L sensor_board-rescue:FT232RL-final U3
 U 1 1 5C6CF653
 P 4950 6600
 F 0 "U3" H 4950 8165 50  0000 C CNN
@@ -2521,4 +2521,22 @@ NoConn ~ 11350 6300
 NoConn ~ 11350 6100
 NoConn ~ 11350 5900
 NoConn ~ 11350 5700
+$Comp
+L power:GND #PWR?
+U 1 1 5CC0974F
+P 5250 8200
+F 0 "#PWR?" H 5250 7950 50  0001 C CNN
+F 1 "GND" H 5255 8027 50  0000 C CNN
+F 2 "" H 5250 8200 50  0001 C CNN
+F 3 "" H 5250 8200 50  0001 C CNN
+	1    5250 8200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 8100 5250 8200
+Wire Wire Line
+	9250 8300 9100 8300
+Wire Wire Line
+	9100 8300 9100 8500
+Connection ~ 9100 8500
 $EndSCHEMATC

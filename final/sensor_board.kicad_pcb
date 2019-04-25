@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 4)
+    (drawings 7)
     (tracks 840)
     (zones 0)
     (modules 76)
@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.254)
+    (last_trace_width 0.25)
     (user_trace_width 0.1524)
     (user_trace_width 0.254)
     (user_trace_width 0.3048)
@@ -355,7 +355,7 @@
   )
 
   (module mp3b:OlinLogo (layer F.Cu) (tedit 59ADD8E6) (tstamp 5CC18042)
-    (at 148.61032 100.6856 90)
+    (at 147.38604 100.9396 90)
     (descr "Imported from OlinLogo.svg")
     (tags svg2mod)
     (attr smd)
@@ -3448,6 +3448,15 @@
     )
   )
 
+  (gr_text "Ariana Olson, Kevin Guo, Leo Liu" (at 135.79348 65.62852) (layer B.SilkS)
+    (effects (font (size 1.5 1.27) (thickness 0.3) italic) (justify mirror))
+  )
+  (gr_text "Olin College Eclectronics Final Project" (at 150.6728 102.16388 90) (layer F.SilkS)
+    (effects (font (size 1.143 0.762) (thickness 0.1905)))
+  )
+  (gr_text "Sensor Board\n" (at 122.49912 106.48188 90) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
   (gr_line (start 118.618 114.8842) (end 118.618 61.44768) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 152.94864 114.8842) (end 118.618 114.8842) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 152.94864 61.44768) (end 152.94864 114.8842) (layer Edge.Cuts) (width 0.1))

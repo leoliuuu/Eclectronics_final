@@ -49,16 +49,17 @@ void setup() {
     Serial.println("e-Paper init failed");
     return;
   }
-  
+
+  // Draw the image defined in imagedata.cpp.
   paint.Clear(UNCOLORED);
   epd.SetFrameMemory(IMAGE_DATA);
   epd.DisplayFrame();
 }
 
 void loop() {
+  // In each iteration of the loop, draw one character in a string.
   paint.SetWidth(120);
   paint.SetHeight(32);
-//  paint.SetRotate(ROTATE_270);
   char print_string[7] = {' '};
   for (int i = 0; i <= counter % 6; ++i) {
     print_string[i] = full_text[i];

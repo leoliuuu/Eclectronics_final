@@ -5,10 +5,11 @@ from scipy.ndimage import imread
 
 MAX_DIM = 200 # pixels
 
-im = imread('test_image.png', flatten=True)
+im = imread('batttery_25.jpg', flatten=True)
+print(im.mean())
 
-#plt.imshow(im, cmap='gray')
-#plt.show()
+plt.imshow(im, cmap='gray')
+plt.show()
 
 pad_h_top = 0
 pad_h_bottom = 0
@@ -45,8 +46,8 @@ def pad_with(vector, pad_width, iaxis, kwargs):
 im = np.pad(im, ((pad_h_top, pad_h_bottom), (pad_w_left, pad_w_right)),
         pad_with, padder=255)
 
-#plt.imshow(im, cmap='gray')
-#plt.show()
+plt.imshow(im, cmap='gray')
+plt.show()
 
 
 def image_to_byte_string(image):

@@ -1,5 +1,6 @@
 /* Main display board */
-#include <SPI.h> 
+#include <SPI.h>
+#include <SparkFunBQ27441.h>
 #include <epd1in54.h>
 #include <epdpaint.h>
 #include "image_data.h"
@@ -7,6 +8,10 @@
 #define COLORED 0
 #define UNCOLORED 1
 
+const unsigned int BATTERY_CAPACITY = 850; // e.g. 850mAh battery
+
+bool eink_connected;
+bool battery_connected;
 using imagedata::background_0;
 using imagedata::background_25;
 using imagedata::background_50;
@@ -27,6 +32,8 @@ const float kMillisPerHour = 3600000;
 const float kMMPerFoot = 304.8;
 const float kFeetPerMile = 5218.0;
 const float kKmPerMile = 1.609;
+
+const float kMaxVoltage = 3.7;
 
 char incoming_byte;
 
@@ -54,22 +61,34 @@ void setup() {
   start_time = millis();
   last_time = start_time;
 
-  if (epd.Init(lut_full_update) != 0) {
-    Serial.println("e-Paper init failed");
-    return;
-  }
+  // Uncomment the line below if the battery fuel guage is connected.
 
-  // The frame memory has to be cleared twice because the e-paper display
-  // has 2 memory areas that are auto-toggled when the display is refreshed.
-  epd.ClearFrameMemory(0xFF); // bit set = white, bit reset = black.
-  epd.DisplayFrame();
-  epd.ClearFrameMemory(0xFF); // bit set = white, bit reset = black.
-  epd.DisplayFrame();
+  //  setupBQ27441();
 
-  if (epd.Init(lut_partial_update) != 0) {
-    Serial.println("e-Paper init failed");
-    return;
-  }
+  // Uncomment the lines below if the E-Ink display is connected.
+
+  //  if (epd.Init(lut_full_update) != 0) {
+  //    Serial.println("e-Paper init failed");
+  //    eink_connected = false;
+  //  } else {
+  //    eink_connected = true;
+  //  }
+
+  //  if (eink_connected) {
+  //    // The frame memory has to be cleared twice because the e-paper display
+  //    // has 2 memory areas that are auto-toggled when the display is refreshed.
+  //    epd.ClearFrameMemory(0xFF); // bit set = white, bit reset = black.
+  //    epd.DisplayFrame();
+  //    epd.ClearFrameMemory(0xFF); // bit set = white, bit reset = black.
+  //    epd.DisplayFrame();
+  //  }
+
+  //  if (epd.Init(lut_partial_update) != 0) {
+  //    Serial.println("e-Paper init failed");
+  //    eink_connected = false;
+  //  } else {
+  //    eink_connected = true;
+  //  }
 }
 
 void loop() {
@@ -94,11 +113,17 @@ void loop() {
 
       // Ride time.
       UpdateRideTime(new_time);
-      
+
       last_time = new_time;
-      
+
       FormatDisplayText();
-      MakeDisplay();
+      Serial.println(full_text_c);
+
+      // Uncomment the lines below if the E-Ink display is connected.
+
+      //      if (eink_connected) {
+      //        MakeDisplay();
+      //      }
     }
   }
 }
@@ -165,7 +190,7 @@ void FormatDisplayText() {
   speed_text += '.';
   speed_text += val_decimal;
   speed_text += '\n';
-  
+
   // Current Distance.
   GetIntegerAndDecimal(distance, &val_int, &val_decimal);
   String distance_text = "Distance: ";
@@ -213,17 +238,44 @@ void FormatDisplayText() {
   avg_speed_text += '\n';
 
   String full_text = speed_text + distance_text + time_text + rpm_text + avg_rpm_text + avg_speed_text;
-  char full_text_c[90];
   full_text.toCharArray(full_text_c, full_text.length());
 }
 
 void MakeDisplay() {
+  unsigned int volts = lipo.voltage(); // Read battery voltage (mV)
   paint.SetWidth(150);
   paint.SetHeight(150);
   paint.Clear(UNCOLORED);
   paint.DrawStringAt(20, 20, full_text_c, &Font24, COLORED);
-  epd.SetFrameMemory(background_100);
+
+  // There is not enough program memory to load all 4 background images
+  // into memory, so we use 2 here for a proof of concept.
+  if ((float) volts / kMaxVoltage > 0.5) {
+    epd.SetFrameMemory(background_100);
+  } else {
+    epd.SetFrameMemory(background_0);
+  }
   epd.SetFrameMemory(paint.GetImage(), 0, 0, paint.GetWidth(), paint.GetHeight());
   epd.DisplayFrame();
 }
 
+void setupBQ27441(void)
+{
+  // Use lipo.begin() to initialize the BQ27441-G1A and confirm that it's
+  // connected and communicating.
+  if (!lipo.begin()) // begin() will return true if communication is successful
+  {
+    // If communication fails, print an error message and loop forever.
+    Serial.println("Error: Unable to communicate with BQ27441.");
+    Serial.println("  Check wiring and try again.");
+    Serial.println("  (Battery must be plugged into Battery Babysitter!)");
+    battery_connected = false;
+    return;
+  }
+  Serial.println("Connected to BQ27441!");
+
+  // Uset lipo.setCapacity(BATTERY_CAPACITY) to set the design capacity
+  // of your battery.
+  lipo.setCapacity(BATTERY_CAPACITY);
+  battery_connected = true;
+}
